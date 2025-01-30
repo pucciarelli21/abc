@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Gliker-Regular";
+  src: url('/fonts/Gliker-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Josefin-Sans-Bold";
+  src: url('/fonts/josefin-sans.bold.ttf');
+}
+
+@font-face {
+  font-family: "Pompiere-Regular";
+  src: url('/fonts/pompiere.regular.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+h3{
+  font-family: "Josefin-Sans-Bold";
+}
+
+p{
+  font-family: "open-sans";
+  font-size: 20px;
+}
+
+.pointer-default {
+  cursor: default;
+}
+
+.center-content{
+  display: grid; 
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-divider {
+  color: white;
+  border: none;
+}
+
+.dropdown-menu {
+  max-width: max-content;
+  max-height: max-content;
+  background-color: white;
+}
+
+.dropdown-menu-items {
+  display: flex;
+}
+
+.dropdown-menu-items li a {
+  font-size: 15px;
+  color: black;
+}
+
+.dropdown-item {
+  font-size: 12px;
+  color: black;
+}
+
+.dropdown-link {
+  color: black;
+}
+
+.dropdown-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+nav {
+  background-color: #002e57;
+  border-bottom: 4px solid #a37629;
+  font-family: "Gliker-Regular";
+}
+
+.navbar-brand,
+.nav-item a {
+  color: azure;
+}
+
+.navbar-brand:hover,
+.nav-item a:hover {
+  color: #cc8d20;
+}
+
+.bi-list:hover {
+  transform: rotate(90deg);
+  color: #cc8d20;
+}
+
+.bi-list{
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.icon-nav {
+  width: 60px;
+}
+
+footer {
+  background-color: #002e57;
+  border-top: 4px solid #a37629;
+  margin: 0;
+  padding: 1.5rem 2.5rem;
+  color: white;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 100;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-footer {
+  width: 200px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  list-style: none;
+}
+
+.contact-item p {
+  padding-left: 0.5rem;
+}
+
+.copyrigth {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+hr {
+  color: #002e57;
+  border: 1.2px #002e57 solid;
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #a37629;
+}
+
+.click-here{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.click-here h3{
+  padding: 0.5rem 2.5rem;
+}
+
+.click-here a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 1rem;
+  border: 3px #db9111 dotted;
+  border-radius: 20px;
+  color:#004888;
+  font-family: "Gliker-Regular";
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.click-here a:hover{
+  color: rgb(41, 41, 41);
+}
+
+@media screen and (max-width: 768px) {
+  .icon-footer {
+    width: 150px;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .link-container {
+    display: grid;
+    text-align: center;
+  }
+
+  .click-here{
+    display: grid;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+
+  .click-here{
+    display: grid;
+  }
+
+  .click-here h4{
+    padding: 0.3rem 1.5rem;
+  }
+  
+  .click-here a{
+    padding: 0.3rem 1.5rem;
+  }
+  
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,0 +1,16 @@
+h1{
+    font-family: "Gliker-Regular";
+}
+
+.error{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10%;
+}
+
+
+footer{
+    bottom: 0;
+}
