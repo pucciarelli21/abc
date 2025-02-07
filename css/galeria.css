@@ -92,3 +92,29 @@
         font-size: 24px;
     }
 }
+
+.modal-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+  }
+  
+  .modal-arrow.left {
+    left: 10px;
+  }
+  
+  .modal-arrow.right {
+    right: 10px;
+  }
+  
+  .modal-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  

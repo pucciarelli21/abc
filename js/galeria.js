@@ -1,66 +1,76 @@
 const slider = document.getElementById('slider');
-const images = document.querySelectorAll('.slider-img');
+const images = Array.from(document.querySelectorAll('.slider-img'));
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 const modal = document.getElementById('modal');
 const modalImg = document.getElementById('modal-img');
 const closeBtn = document.getElementById('close');
+const modalNext = document.getElementById('modal-next');
+const modalPrev = document.getElementById('modal-prev');
+const sliderNext = document.createElement('button');
+const sliderPrev = document.createElement('button');
+
+// Crear botones de navegación en el slider
+sliderNext.innerHTML = '&#9654;'; // Flecha derecha
+sliderPrev.innerHTML = '&#9664;'; // Flecha izquierda
+sliderNext.id = 'slider-next';
+sliderPrev.id = 'slider-prev';
+slider.appendChild(sliderNext);
+slider.appendChild(sliderPrev);
 
 let currentIndex = 0;
 const totalImages = images.length;
+let imageWidth = images[0].offsetWidth + parseFloat(getComputedStyle(images[0]).marginLeft) * 2;
 
-// Función para calcular el ancho total visible de una imagen, incluyendo márgenes
-const getImageWidth = () => {
-    const style = window.getComputedStyle(images[0]); // Estilo de la primera imagen
-    const imageWidth = images[0].offsetWidth; // Ancho de la imagen
-    const margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight); // Margen total
-    return imageWidth + margin; // Ancho completo
-};
-
-// Ajusta dinámicamente el desplazamiento del slider
 const updateSliderPosition = () => {
-    const imageWidth = getImageWidth(); // Ancho visible de cada imagen
     slider.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
 };
 
-// Redimensiona dinámicamente al cambiar el tamaño de la ventana
-window.addEventListener('resize', updateSliderPosition);
-
-// Botones de avanzar y retroceder con loop infinito
-nextBtn.addEventListener('click', () => {
-    const imageWidth = getImageWidth();
-    currentIndex = (currentIndex + 1) % totalImages; // Regresa al inicio si llega al final
+window.addEventListener('resize', () => {
+    imageWidth = images[0].offsetWidth + parseFloat(getComputedStyle(images[0]).marginLeft) * 2;
     updateSliderPosition();
 });
 
-prevBtn.addEventListener('click', () => {
-    const imageWidth = getImageWidth();
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Salta al final si está en el inicio
-    updateSliderPosition();
-});
+const changeImage = (direction) => {
+    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+    requestAnimationFrame(updateSliderPosition);
+};
 
-// Modal de imagen grande
-images.forEach(image => {
+nextBtn.addEventListener('click', () => changeImage(1));
+prevBtn.addEventListener('click', () => changeImage(-1));
+sliderNext.addEventListener('click', () => changeImage(1));
+sliderPrev.addEventListener('click', () => changeImage(-1));
+
+images.forEach((image, index) => {
     image.addEventListener('click', () => {
         modal.style.display = 'flex';
         modalImg.src = image.src;
-        document.body.style.overflow = 'hidden'; // Deshabilita el scroll de la página
+        currentIndex = index;
+        document.body.style.overflow = 'hidden';
     });
 });
 
-// Cerrar modal si se hace clic fuera de la imagen
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Habilita el scroll de la página nuevamente
+const updateModalImage = () => {
+    modalImg.src = images[currentIndex].src;
+};
+
+document.addEventListener('keydown', (e) => {
+    if (modal.style.display === 'flex') {
+        if (e.key === 'ArrowRight') changeImage(1);
+        else if (e.key === 'ArrowLeft') changeImage(-1);
+        else if (e.key === 'Escape') closeModal();
+        updateModalImage();
     }
 });
 
-// Cerrar modal con el botón de cerrar
-closeBtn.addEventListener('click', () => {
+const closeModal = () => {
     modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Habilita el scroll de la página nuevamente
-});
+    document.body.style.overflow = 'auto';
+};
 
-// Inicializa la posición del slider al cargar la página
+modalNext.addEventListener('click', () => { changeImage(1); updateModalImage(); });
+modalPrev.addEventListener('click', () => { changeImage(-1); updateModalImage(); });
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+closeBtn.addEventListener('click', closeModal);
+
 updateSliderPosition();

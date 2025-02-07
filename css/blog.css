@@ -68,9 +68,12 @@
     max-width: 750px;
 }
 
+
 .img-info{
     width: 400px;
     object-fit: cover;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.57);
+
 }
 
 .galery{
