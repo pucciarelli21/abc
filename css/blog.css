@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; 
-    gap: 1rem; /* Usamos gap para espaciar las tarjetas uniformemente */
+    gap: 1rem;
 }
 
 .cards .card {
@@ -59,7 +59,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 2rem; 
+    gap: 2rem;
+
+    max-width: 100%;
 }
 
 .info h3 {
@@ -71,6 +73,10 @@
     text-align: justify;
     max-width: 750px;
     width: 100%;
+}
+
+.info-foot p, h5{
+    text-align: center;
 }
 
 
@@ -107,15 +113,16 @@ br {
     .info h3 {
         text-align: center;
     }
+    .info-container p {
+        max-width: 650px;
+    }
 }
-
 
 @media screen and (max-width: 1200px) {
     .info h3 {
         text-align: center;
     }
 }
-
 
 @media screen and (max-width: 996px) {
     .info-container p {
