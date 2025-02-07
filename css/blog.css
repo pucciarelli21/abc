@@ -111,7 +111,7 @@ br {
 
 @media screen and (max-width: 1400px) {
     .info h3 {
-        text-align: center;
+        text-align: left;
     }
     .info-container p {
         max-width: 650px;
