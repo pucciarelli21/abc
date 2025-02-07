@@ -11,8 +11,6 @@ const sliderNext = document.createElement('button');
 const sliderPrev = document.createElement('button');
 
 // Crear botones de navegación en el slider
-sliderNext.innerHTML = '&#9654;'; // Flecha derecha
-sliderPrev.innerHTML = '&#9664;'; // Flecha izquierda
 sliderNext.id = 'slider-next';
 sliderPrev.id = 'slider-prev';
 slider.appendChild(sliderNext);
