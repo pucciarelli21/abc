@@ -64,9 +64,8 @@
     max-width: 100%;
 }
 
-.info h3 {
-    text-align: center;
-    margin-left: 2rem;
+.text-movile {
+    text-align: left;
 }
 
 .info-container p {

@@ -11,6 +11,7 @@ const sliderNext = document.createElement('button');
 const sliderPrev = document.createElement('button');
 
 // Crear botones de navegación en el slider
+
 sliderNext.id = 'slider-next';
 sliderPrev.id = 'slider-prev';
 slider.appendChild(sliderNext);

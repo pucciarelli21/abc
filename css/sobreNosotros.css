@@ -23,10 +23,9 @@ a{
   animation: fadeInDown 1.5s ease-out;
 }
 
-.hero-subtitle {
-  font-size: 18px;
-  margin-bottom: 40px;
+.hero p {
   animation: fadeIn 2s ease-out;
+  text-align: justify;
 }
 
 .btn-explore {
@@ -75,10 +74,12 @@ a{
 
 .text {
   flex: 1;
+  font-weight:100;
 }
 
 .text h2{
-  color: #a37629;
+  color: #e4940a;
+  font-size: 28px;
 }
 
 .image {
@@ -94,7 +95,7 @@ a{
 /* Values Grid */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 20px;
 }
 
