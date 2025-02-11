@@ -67,15 +67,6 @@ body {
   padding-top: 70px;
 }
 
-h3{
-  font-family:'Georgia';
-}
-
-p{
-  font-family: "sans-serif";
-  font-size: 20px;
-}
-
 .pointer-default {
   cursor: default;
 }
@@ -229,7 +220,6 @@ hr {
   border: 3px #db9111 dotted;
   border-radius: 20px;
   color:#004888;
-  font-family: "Gliker-Regular";
   font-size: 18px;
   font-weight: 700;
 }
