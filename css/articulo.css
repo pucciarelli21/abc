@@ -122,6 +122,26 @@ a{
     font-family: 'Josefin-Sans-Bold';
   }
   
+  .section a {
+    color: rgb(32, 128, 218);
+    text-decoration: none;
+}
+
+.section a:hover {
+    color: rgb(21, 87, 150);
+    text-decoration: none;
+}
+
+.bg-section a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.bg-section a:hover {
+    color: rgb(156, 115, 10);
+    text-decoration: none;
+}
+
   /* Animations */
   @keyframes fadeIn {
     from {
@@ -165,7 +185,9 @@ a{
     }
   
     .section p{
-      text-align: justify;
+      text-align:justify;
+      margin: 0;
+      padding: 0;
     }
 
     h2{

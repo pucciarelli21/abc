@@ -32,6 +32,10 @@ body, p {
   line-height: 1.6;
 }
 
+strong{
+  font-family: 'Inter', sans-serif;
+}
+
 small, .caption, button {
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
@@ -209,7 +213,7 @@ hr {
 }
 
 .click-here h3{
-  padding: 0.5rem 2.5rem;
+  padding: 0rem 2.5rem;
 }
 
 .click-here a{
@@ -217,11 +221,12 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 0rem 1rem;
-  border: 3px #db9111 dotted;
-  border-radius: 20px;
-  color:#004888;
+  border-radius: 15px;
+  background-color:#002e57;
+  color:white;
   font-size: 18px;
   font-weight: 700;
+  box-shadow: 1px 1px 6px 1px #333;
 }
 
 .click-here a:hover{
@@ -254,8 +259,9 @@ hr {
     display: grid;
   }
 
-  .click-here h4{
-    padding: 0.3rem 1.5rem;
+  .click-here h3{
+    font-size: 18px;
+    padding-bottom: 0.5rem;
   }
   
   .click-here a{
