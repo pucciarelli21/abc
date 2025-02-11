@@ -184,8 +184,12 @@ a{
       font-size: 16px;
     }
   
+    .value-item{
+      text-align: left;
+    }
+
     .section p{
-      text-align:justify;
+      text-align:left;
       margin: 0;
       padding: 0;
     }

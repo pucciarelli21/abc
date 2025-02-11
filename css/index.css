@@ -152,6 +152,10 @@ br {
         text-align: center;
     }
 
+    .info-container p {
+        text-align: left;7
+    }
+
     .img-info {
         max-width: 300px;
         height: auto;
