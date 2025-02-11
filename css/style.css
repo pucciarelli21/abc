@@ -261,7 +261,16 @@ hr {
   .click-here a{
     padding: 0.3rem 1.5rem;
   }
-  
+
+}
+
+@media screen and (max-width:320px){
+  .footer-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .fadeIn {
