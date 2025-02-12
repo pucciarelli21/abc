@@ -88,20 +88,21 @@ a{
   border-radius: 10px;
 }
 
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .value-item {
-  text-align: justify;
   background-color: #e4f0fd;
   border: 2px solid #e4f0fd;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 0px 7px rgba(148, 148, 148, 0.582);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .value-item:hover {
@@ -119,7 +120,6 @@ a{
   font-size: 24px;
   color: #1667ad;
   margin-bottom: 10px;
-  font-family: 'Josefin-Sans-Bold';
 }
 
 /* Animations */
@@ -162,9 +162,5 @@ a{
 
   .btn-explore {
     font-size: 16px;
-  }
-
-  .content{
-    text-align: justify;
   }
 }
