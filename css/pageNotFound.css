@@ -3,14 +3,273 @@ h1{
 }
 
 .error{
-    display: grid;
+    padding: 10%;
+}
+
+.bici-container{
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 10%;
 }
 
 
 footer{
     bottom: 0;
 }
+
+.bicycle {
+    width: 10rem; /* Ajustado a 100px */
+    height: 7rem; /* Escalado proporcional */
+    position: relative;
+  }
+  
+  @keyframes bicycleAnim {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(-360deg);
+    }
+  }
+  
+  .bicycle div {
+    position: absolute;
+  }
+  
+  .wheel {
+    width: 3.3rem; /* Escalado proporcional */
+    aspect-ratio: 1;
+    background-color: #000;
+    border-radius: 50%;
+    bottom: 0;
+    border: 0.07rem dashed #000; /* Más delgado para el tamaño reducido */
+    background-clip: content-box;
+    display: grid;
+    place-items: center;
+    animation: bicycleAnim 5s infinite linear;
+  }
+  
+  .wheel::after {
+    content: "";
+    width: 2.7rem; /* Escalado proporcional */
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    border: 1rem solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .back-wheel {
+    right: 0;
+  }
+  
+  .front-fork {
+    width: 0.3rem; /* Ajustado proporcionalmente */
+    height: 1.6rem;
+    background-color: #000;
+    bottom: 1.5rem;
+    left: 1.7rem;
+    transform: rotateZ(20deg);
+    transform-origin: left bottom;
+  }
+  
+  .front-fork::before {
+    content: "";
+    width: 0.2rem;
+    height: 0.5rem;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0.05rem;
+    transform: rotateZ(30deg) translateX(-0.1rem);
+  }
+  
+  .tube {
+    width: 0.2rem;
+    height: 1.2rem;
+    background-color: #000;
+    left: 0.05rem;
+    top: -1.2rem;
+  }
+  
+  .tube::before {
+    content: "";
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: #000;
+    position: absolute;
+    left: -0.05rem;
+    top: 0.05rem;
+  }
+  
+  .handlebars {
+    width: 0.8rem;
+    height: 0.2rem;
+    background-color: #000;
+    top: 1.8rem;
+    left: 2rem;
+    transform: rotateZ(15deg);
+    perspective: 5rem;
+  }
+  
+  .handlebars::before {
+    content: "";
+    width: 0.4rem;
+    aspect-ratio: 1;
+    background-color: #000;
+    position: absolute;
+    top: -0.1rem;
+    left: -0.1rem;
+    border-radius: 50%;
+  }
+  
+  .handlebars::after {
+    content: "";
+    width: 3rem;
+    height: 0.2rem;
+    background-color: #000;
+    position: absolute;
+    left: -1.55rem;
+    transform: rotateY(-70deg);
+    border-radius: 0.2rem;
+  }
+  
+  .crossbar {
+    width: 2.7rem;
+    height: 0.35rem;
+    background-color: #000;
+    top: 2.2rem;
+    left: 2.6rem;
+    transform: rotateZ(20deg);
+    transform-origin: left top;
+    border-radius: 0 50% 50% 0;
+  }
+  
+  .frame-1 {
+    width: 3.2rem;
+    height: 0.35rem;
+    background-color: #000;
+    top: 2.5rem;
+    left: 2.6rem;
+    transform: rotateZ(45deg);
+    transform-origin: left top;
+    border-radius: 0 50% 50% 0;
+  }
+  
+  .frame-2 {
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: #000;
+    top: 4.4rem;
+    left: 4.5rem;
+    z-index: 10;
+  }
+  
+  .seat-tube {
+    width: 0.3rem;
+    height: 1.8rem;
+    background-color: #000;
+    top: 3rem;
+    left: 4.7rem;
+    transform: rotateZ(15deg);
+  }
+  
+  .seat-tube::before {
+    content: "";
+    width: 0.2rem;
+    height: 1.1rem;
+    position: absolute;
+    background-color: #000;
+    top: -1.1rem;
+    left: 0.05rem;
+  }
+  
+  .seat-tube::after {
+    content: "";
+    width: 0.25rem;
+    height: 0.15rem;
+    position: absolute;
+    background-color: #000;
+    top: -0.3rem;
+    left: 0.025rem;
+  }
+  
+  .seat {
+    width: 1.2rem;
+    height: 0.3rem;
+    background-color: #000;
+    top: -1.2rem;
+    left: -0.6rem;
+    transform: rotateZ(-12deg);
+    border-radius: 20% 0.1rem 0.1rem 80%;
+  }
+  
+  .back-fork {
+    width: 0.2rem;
+    height: 2.5rem;
+    background-color: #000;
+    left: 6rem;
+    top: 2.6rem;
+    transform: rotateZ(-55deg);
+    z-index: 10;
+  }
+  
+  .crank {
+    width: 1rem;
+    height: 1rem;
+    background-color: #000;
+    border-radius: 50%;
+    top: 4rem;
+    left: 4rem;
+    border: 0.05rem dashed #000;
+    background-clip: content-box;
+    animation: bicycleAnim 10s infinite linear;
+  }
+  
+  .pedals {
+    width: 0.15rem;
+    height: 1.7rem;
+    background-color: #000;
+    top: 3.7rem;
+    left: 4.4rem;
+    transform: rotateZ(-12deg);
+    border-radius: 0.05rem;
+    animation: bicycleAnim 10s infinite linear;
+  }
+  
+  .pedals::before,
+  .pedals::after {
+    content: "";
+    width: 0.5rem;
+    height: 0.17rem;
+    background-color: #000;
+    position: absolute;
+    left: -0.18rem;
+    border-radius: 0.03rem;
+    animation: bicycleAnim 10s infinite linear reverse;
+  }
+  
+  .pedals::before {
+    top: 0.02rem;
+  }
+  
+  .pedals::after {
+    bottom: 0.02rem;
+  }
+  
+  .chain {
+    width: 3.15rem;
+    height: 0.85rem;
+    border: 0.05rem solid #000;
+    top: 4.1rem;
+    left: 4.05rem;
+    border-radius: 0.5rem 50% 50% 0.5rem;
+    z-index: 10;
+  }
+  
+
+  @media screen and (max-width: 425px){
+    .error{
+        padding-top: 30%;
+    }
+  }
