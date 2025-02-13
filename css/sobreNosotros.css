@@ -88,9 +88,15 @@ a{
   border-radius: 10px;
 }
 
+.image img:nth-child(1){
+  max-width: 600px;
+  max-height: 600px;
+}
+
 .values-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -102,7 +108,7 @@ a{
   box-shadow: 0px 0px 7px rgba(148, 148, 148, 0.582);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .value-item:hover {
@@ -158,6 +164,11 @@ a{
 @media (max-width: 480px) {
   .hero-title {
     font-size: 28px;
+  }
+
+  .image img:nth-child(1){
+    max-width: 350px;
+    max-height: 400px;
   }
 
   .btn-explore {

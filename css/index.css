@@ -83,8 +83,8 @@
 .img-info {
     width: 100%;
     max-width: 400px;
-    height: auto;
-    object-fit: cover;
+    height: 550px;
+    object-fit: fill;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.57);
 }
 
@@ -153,7 +153,7 @@ br {
     }
 
     .info-container p {
-        text-align: left;7
+        text-align: left;
     }
 
     .img-info {
